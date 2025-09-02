@@ -1,0 +1,52 @@
+@startuml scheduling domain
+
+'== Entities ==
+class MonthSchedule {
+    -month: Month
+    -year: int
+    -days: [DaySchedule]
+}
+
+class DaySchedule {
+    -day: string
+    -date: Date
+}
+
+class DepartmentDay {
+    -dept_id: uuid
+    -weekday: WeekDay
+}
+
+class OffDay {
+    -employee_id: uuid
+    -date: Date
+}
+
+class Leave {
+    -employee_id: uuid
+    -start: Date
+    -end: Date
+    -expired: bool
+}
+
+'== Value objects ==
+class WeekDay {
+    -name: string
+}
+
+class Month {
+    -name: string
+    -num_of_days: int
+}
+
+class Date {
+    -day: int
+    -month: int
+    -year: int
+}
+
+'== Associations ==
+MonthSchedule "1" -- "*" DaySchedule : as days
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml use case model
+left to right direction
+
+actor manager
+
+rectangle System {
+    usecase "Manage employees" as uc_manage_empl
+    usecase "Manage off days" as uc_manage_offs
+    usecase "Manage leave days" as uc_manage_leaves
+    usecase "Manage schedule" as uc_manage_sched
+}
+
+manager --> uc_manage_empl
+manager --> uc_manage_offs
+manager --> uc_manage_leaves
+manager --> uc_manage_sched
+
+@enduml

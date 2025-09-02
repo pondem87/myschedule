@@ -1,0 +1,25 @@
+@startuml department domains
+
+'== Entities ==
+class Department {
+    -dept_id: uuid
+    -name: string
+    -description: string
+}
+
+class DepartmentEmployee {
+    -dept_id: uuid
+    -employee_id: uuid
+}
+
+class SharableDepartments {
+    -dept1_id: uuid
+    -dept2_id: uuid
+}
+
+'== Associations =='
+Department "1" -- "0..*" DepartmentEmployee
+Department "1" -- "0..*" SharableDepartments
+Department "1" -- "0..*" SharableDepartments
+
+@enduml

@@ -1,3 +1,11 @@
+# Welcome to MySchedule
+
+- [REQUIREMENTS](/docs/00-REQUIREMENTS.md)
+- [DOMAIN MODELLING](/docs/01-DOMAIN_MODELLING.md)
+- [USECASE MODELLING](/docs/02-USECASE_MODELLING.md)
+
+
+
 # Tauri + React + Typescript
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.

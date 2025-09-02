@@ -1,0 +1,21 @@
+@startuml person_domain
+title personnel domain
+
+'== Entities ==
+class Employee {
+    -employee_id: uuid
+    -name: string
+    -title: string
+    -role: Role
+}
+
+'== Value objects ==
+class Role {
+    -value: string
+    +{static}Role create(string role)
+}
+
+'== Associations ==
+Employee *-- Role : as role
+
+@enduml

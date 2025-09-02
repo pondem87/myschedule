@@ -1,0 +1,1 @@
+[diagram](/docs/diagrams/out/use_case_models/use%20case%20model.png)
